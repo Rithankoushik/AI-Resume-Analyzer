@@ -59,7 +59,7 @@ Please provide your analysis in a clear, structured format with specific recomme
                 {"role": "user", "content": prompt}
             ],
             "temperature": 0.7,
-            "max_tokens": 1000
+            "max_tokens": 2000
         }
 
         response = httpx.post(
