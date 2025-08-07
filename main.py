@@ -3,8 +3,14 @@ import PyPDF2
 import io
 from openai import OpenAI
 
-# ✅ Use secret from Streamlit Cloud (no need for dotenv)
+# ✅ Get API key from Streamlit secrets
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+
+# ✅ Set OpenRouter as base URL
+client = OpenAI(
+    api_key=OPENAI_API_KEY,
+    base_url="https://openrouter.ai/api/v1"
+)
 
 # 🖥️ Page config
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📃", layout="centered")
@@ -49,9 +55,9 @@ Resume content:
 
 Please provide your analysis in a clear, structured format with specific recommendations."""
 
-        client = OpenAI(api_key=OPENAI_API_KEY)
+        # ✅ Make request to OpenRouter with valid model
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="openai/gpt-4o",  # ✅ Use correct OpenRouter-supported model name
             messages=[
                 {"role": "system", "content": "You are an expert resume reviewer with years of experience in HR and recruitment."},
                 {"role": "user", "content": prompt}
