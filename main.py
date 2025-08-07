@@ -3,7 +3,7 @@ import PyPDF2
 import io
 import httpx
 
-OPENROUTER_API_KEY = st.secrets["OPENAI_API_KEY"]  # Your OpenRouter key
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]  # Your OpenRouter key
 REFERER = "https://your-username-your-app-name.streamlit.app"  # 👈 UPDATE THIS
 
 # Streamlit UI setup
@@ -47,7 +47,7 @@ Please provide your analysis in a clear, structured format with specific recomme
 
         # OpenRouter API call using DeepSeek-R1
         headers = {
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
             "HTTP-Referer": REFERER,
             "X-Title": "AI Resume Analyzer"
         }
