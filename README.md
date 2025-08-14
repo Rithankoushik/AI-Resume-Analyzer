@@ -1,6 +1,6 @@
 # 📄 AI Resume Analyzer
 
-An AI-powered Streamlit web application that analyzes resumes using OpenAI GPT-4 and provides tailored feedback based on job roles.
+An AI-powered Streamlit web application that analyzes resumes using Deepseek R1 and provides tailored feedback based on job roles.
 
 ---
 
@@ -46,3 +46,4 @@ echo "OPENAI_API_KEY=your_api_key_here" > .env
 
 # 5. Run the app
 streamlit run main.py
+
