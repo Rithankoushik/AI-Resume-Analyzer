@@ -7,7 +7,7 @@ An AI-powered Streamlit web application that analyzes resumes using Deepseek R1 
 ## 🚀 Features
 
 - 📤 Upload resumes in `.pdf` or `.txt` format
-- 🧠 Uses **OpenAI GPT-4 API** for intelligent feedback generation
+- 🧠 Uses **OpenRouter API** for intelligent feedback generation
 - 📌 Job role-specific analysis with custom prompt engineering
 - 💡 Suggestions on skills, clarity, and experience presentation
 - 🧪 Built with **Streamlit** for interactive UI
@@ -19,7 +19,7 @@ An AI-powered Streamlit web application that analyzes resumes using Deepseek R1 
 
 - **Python 3.10+**
 - **Streamlit**
-- **OpenAI GPT-4 API**
+- **Openrouter API**
 - **LangChain (for prompt management & modular LLM design)**
 - **PyPDF2** (PDF text extraction)
 - **dotenv** (for environment variable management)
@@ -46,4 +46,5 @@ echo "OPENAI_API_KEY=your_api_key_here" > .env
 
 # 5. Run the app
 streamlit run main.py
+
 
